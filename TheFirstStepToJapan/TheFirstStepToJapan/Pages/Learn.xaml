@@ -1,0 +1,228 @@
+﻿<Page x:Class="TheFirstStepToJapan.Pages.Learn"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TheFirstStepToJapan.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="Learn">
+
+    <Page.Resources>
+
+        <Style TargetType="Button" x:Key="ABC">
+            <Setter Property="Background" >
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF4F4F4" Offset="0.423"/>
+                        <GradientStop Color="#FFDEDEDE" Offset="0"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="Foreground" Value="#FF1B2452"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid MouseDown="Grid_MouseDown" SizeChanged="Grid_SizeChanged">
+
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="2" Opacity="0.3"/>
+        </Grid.Effect>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <Button 
+            x:Name="fon"
+            Opacity="0" 
+            Grid.ColumnSpan="4" 
+            Margin="0" 
+            Grid.RowSpan="6"
+            KeyDown="fon_KeyDown"
+            MouseMove="fon_MouseMove"
+            MouseDown="Grid_MouseDown"
+            Click="fon_Click"
+            />
+
+
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox 
+                x:Name="text"
+                Margin="20,30,20,20" 
+                FontFamily="Calibri" 
+                FontSize="20" 
+                FontWeight="Bold" 
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center"
+                TextWrapping="Wrap"
+                Text="132" 
+                Grid.Column="1" 
+                Foreground="#FF35955C"
+                IsReadOnly="True"
+                />
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="93*"/>
+                <ColumnDefinition Width="464*"/>
+                <ColumnDefinition Width="138*"/>
+                <ColumnDefinition Width="105*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="29*"/>
+                <RowDefinition Height="12*"/>
+                <RowDefinition Height="28*"/>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="120*"/>
+            </Grid.RowDefinitions>
+
+            <Button 
+                Content="Назад"
+                x:Name="Back"
+                Click="back_Click" 
+                Style="{StaticResource ABC}" 
+                Margin="2,2,2,0" 
+                Grid.RowSpan="2"
+             />
+
+
+
+            <Button
+                x:Name="kat"
+                Style="{StaticResource ABC}"
+                Content="Катакана [?]"
+                Grid.Column="2" 
+                Grid.Row="1" 
+                Grid.RowSpan="2" 
+                Foreground="#FF2CCB50" 
+                Click="kat_Click"
+                />
+            <Button
+                x:Name="hir"
+                Style="{StaticResource ABC}"
+                Content="Хирагана [?]"
+                Grid.Column="2" 
+                Grid.Row="4" 
+                Foreground="#FFAE3E1D" 
+                Click="hir_Click"
+                />
+
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBox 
+                x:Name="proportion"
+                FontFamily="Calibri" 
+                FontSize="20" 
+                FontWeight="Bold" 
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center"
+                TextWrapping="Wrap"
+                Text="Правильных ответов подряд:" 
+                Grid.Row="0"
+                Margin="15"
+                Foreground="#FF1B2452"
+                IsReadOnly="True"
+                KeyDown="fon_KeyDown"
+                MouseMove="fon_MouseMove"
+            />
+
+            <TextBox 
+                x:Name="word_stat"
+                FontFamily="Calibri" 
+                FontSize="20" 
+                FontWeight="Bold" 
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center"
+                TextWrapping="Wrap"
+                Text="Count word" 
+                Grid.Row="0"
+                Margin="15"
+                Foreground="#FF1B2452"
+                IsReadOnly="True"
+                KeyDown="fon_KeyDown"
+                MouseMove="fon_MouseMove" 
+                Grid.Column="3"
+            />
+
+            <Button 
+                x:Name="add_Word"
+                Content="add word" 
+                Style="{StaticResource ABC}" 
+                Grid.Row="1"
+                Margin="15,0,15,80" 
+                Click="add_Word_Click" 
+                Grid.Column="3"
+                
+                KeyDown="fon_KeyDown"
+                MouseMove="fon_MouseMove" 
+            />
+
+            <Button x:Name="b1" Tag="1" Content="Button" Style="{StaticResource ABC}" Grid.Column="1" Margin="60,20,20,20" Click="b_Click"/>
+            <Button x:Name="b2" Tag="2" Content="Button" Style="{StaticResource ABC}" Grid.Column="2" Margin="20,20,60,20" Click="b_Click"/>
+            <Button x:Name="b3" Tag="3" Content="Button" Style="{StaticResource ABC}" Grid.Column="1" Margin="60,20,20,20" Grid.Row="1" Click="b_Click"/>
+            <Button x:Name="b4" Tag="4" Content="Button" Style="{StaticResource ABC}" Grid.Column="2" Margin="20,20,60,20" Grid.Row="1" Click="b_Click"/>
+
+            <TextBox x:Name="f1" Grid.Column="1" Margin="3000" Background="#7FAAAAAA" Focusable="False" IsTabStop="False" AllowDrop="False" KeyDown="fon_KeyDown" MouseMove="fon_MouseMove" Cursor="Arrow"/>
+            <TextBox x:Name="f2" Grid.Column="2" Margin="3000" Background="#7FAAAAAA" Focusable="False" IsTabStop="False" AllowDrop="False" KeyDown="fon_KeyDown" MouseMove="fon_MouseMove" Cursor="Arrow"/>
+            <TextBox x:Name="f3" Grid.Column="1" Margin="3000" Grid.Row="1" Background="#7FAAAAAA" Focusable="False" IsTabStop="False" AllowDrop="False" KeyDown="fon_KeyDown" MouseMove="fon_MouseMove" Cursor="Arrow"/>
+            <TextBox x:Name="f4" Grid.Column="2" Margin="3000" Grid.Row="1" Background="#7FAAAAAA" Focusable="False" IsTabStop="False" AllowDrop="False" KeyDown="fon_KeyDown" MouseMove="fon_MouseMove" Cursor="Arrow"/>
+            
+
+        </Grid>
+
+        <Image
+            x:Name="Abc"
+            Opacity="0"
+            Source="Katakana.jpg"
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center"
+            Grid.ColumnSpan="4" 
+            Margin="1000" 
+            Grid.RowSpan="6"
+            />
+
+        <Image
+            x:Name="Abc2"
+            Opacity="0"
+            Source="Hiragana.jpg"
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center"
+            Grid.ColumnSpan="4" 
+            Margin="1000" 
+            Grid.RowSpan="6"
+            />
+
+    </Grid>
+</Page>
