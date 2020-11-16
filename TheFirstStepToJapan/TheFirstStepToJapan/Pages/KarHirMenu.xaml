@@ -48,10 +48,14 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="41*"/>
-            <RowDefinition Height="80*"/>
-            <RowDefinition Height="80*"/>
-            <RowDefinition Height="79*"/>
-            <RowDefinition Height="80*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="59*"/>
             <RowDefinition Height="80*"/>
             <RowDefinition Height="80*"/>
             <RowDefinition Height="80*"/>
@@ -62,7 +66,7 @@
             Opacity="0" 
             Grid.ColumnSpan="8" 
             Margin="0" 
-            Grid.RowSpan="8"
+            Grid.RowSpan="12"
             KeyDown="fon_KeyDown"
             MouseMove="fon_MouseMove"
             />
@@ -80,8 +84,8 @@
             x:Name="aiueo"
             Content="a i u e o" 
             Grid.Column="1"
-            Grid.Row="2"
-            Style="{StaticResource ABC}"  
+            Grid.Row="3"
+            Style="{StaticResource ABC}" Grid.RowSpan="2"  
             
             />
 
@@ -89,112 +93,112 @@
             Content="K" 
             x:Name="k"
             Grid.Column="2"
-            Grid.Row="2"
-            Style="{StaticResource ABC}" 
+            Grid.Row="3"
+            Style="{StaticResource ABC}" Grid.RowSpan="2" 
             />
 
         <Button 
             Content="G" 
             x:Name="g"
             Grid.Column="3"
-            Grid.Row="2"
-            Style="{StaticResource ABC}"
+            Grid.Row="3"
+            Style="{StaticResource ABC}" Grid.RowSpan="2"
             />
 
         <Button 
             Content="S" 
             x:Name="s"
             Grid.Column="4"
-            Grid.Row="2"
-            Style="{StaticResource ABC}"
+            Grid.Row="3"
+            Style="{StaticResource ABC}" Grid.RowSpan="2"
             />
 
         <Button 
             Content="Z" 
             x:Name="z"
             Grid.Column="5"
-            Grid.Row="2"
-            Style="{StaticResource ABC}"
+            Grid.Row="3"
+            Style="{StaticResource ABC}" Grid.RowSpan="2"
             />
 
         <Button 
             Content="T" 
             x:Name="t"
             Grid.Column="1"
-            Grid.Row="3"
-            Style="{StaticResource ABC}" 
+            Grid.Row="5"
+            Style="{StaticResource ABC}" Grid.RowSpan="2" 
             />
 
         <Button 
             Content="D" 
             x:Name="d"
             Grid.Column="2"
-            Grid.Row="3"
-            Style="{StaticResource ABC}" 
+            Grid.Row="5"
+            Style="{StaticResource ABC}" Grid.RowSpan="2" 
             />
 
         <Button 
             Content="N" 
             x:Name="n"
             Grid.Column="3"
-            Grid.Row="3"
-            Style="{StaticResource ABC}"
+            Grid.Row="5"
+            Style="{StaticResource ABC}" Grid.RowSpan="2"
             />
 
         <Button 
             Content="H" 
             x:Name="h"
             Grid.Column="4"
-            Grid.Row="3"
-            Style="{StaticResource ABC}" 
+            Grid.Row="5"
+            Style="{StaticResource ABC}" Grid.RowSpan="2" 
             />
 
         <Button 
             Content="B" 
             x:Name="b"
             Grid.Column="5"
-            Grid.Row="3"
-            Style="{StaticResource ABC}" 
+            Grid.Row="5"
+            Style="{StaticResource ABC}" Grid.RowSpan="2" 
             />
 
         <Button 
             Content="P" 
             x:Name="p"
             Grid.Column="1"
-            Grid.Row="4"
-            Style="{StaticResource ABC}"
+            Grid.Row="7"
+            Style="{StaticResource ABC}" Grid.RowSpan="2"
             />
 
         <Button 
             Content="M" 
             x:Name="m"
             Grid.Column="2"
-            Grid.Row="4"
-            Style="{StaticResource ABC}"
+            Grid.Row="7"
+            Style="{StaticResource ABC}" Grid.RowSpan="2"
             />
 
         <Button 
             Content="Y" 
             x:Name="y"
             Grid.Column="3"
-            Grid.Row="4"
-            Style="{StaticResource ABC}"
+            Grid.Row="7"
+            Style="{StaticResource ABC}" Grid.RowSpan="2"
             />
 
         <Button 
             Content="R"
             x:Name="r"
             Grid.Column="4"
-            Grid.Row="4"
-            Style="{StaticResource ABC}"
+            Grid.Row="7"
+            Style="{StaticResource ABC}" Grid.RowSpan="2"
             />
 
         <Button 
             Content="W, N" 
             x:Name="w"
             Grid.Column="5"
-            Grid.Row="4"
-            Style="{StaticResource ABC}"
+            Grid.Row="7"
+            Style="{StaticResource ABC}" Grid.RowSpan="2"
             />
 
         <Button 
@@ -203,7 +207,7 @@
             IsEnabled="False"
             Grid.Column="2"
             Grid.ColumnSpan="3"
-            Grid.Row="6"
+            Grid.Row="10"
             Click="test_Click"
             KeyDown="fon_KeyDown"
             Style="{StaticResource ABC}"
@@ -216,20 +220,60 @@
             IsEnabled="False"
             Grid.Column="2"
             Grid.ColumnSpan="3"
-            Grid.Row="7"
+            Grid.Row="11"
             Style="{StaticResource ABC}"
             Margin="8,0,8,16" 
             Click="learn_Click"
             KeyDown="fon_KeyDown"
             />
 
+        <TextBox
+            x:Name="fon_text"
+            IsEnabled="False"
+            FontFamily="Calibri" 
+            FontSize="20" 
+            FontWeight="Bold" 
+            HorizontalContentAlignment="Center" 
+            VerticalContentAlignment="Center"
+            TextWrapping="Wrap"
+            Text="" 
+            Grid.Row="2"
+            Margin="10,0"
+            Foreground="#FF1B2452"
+            IsReadOnly="True"
+            KeyDown="fon_KeyDown"
+            MouseMove="fon_MouseMove"
+            Grid.ColumnSpan="2" 
+            Grid.RowSpan="7" 
+            Grid.Column="6" 
+            Background="White"
+            >
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FF202225"/>
+            </TextBox.BorderBrush>
+        </TextBox>
+
+        <Label
+            x:Name="Text_but"
+            Content="Выбрать всё:"
+            Grid.Row="2"
+            Grid.Column="6"
+            Grid.ColumnSpan="2"
+            Margin="10,0"
+            FontSize="20"
+            FontFamily="Calibri" 
+            FontWeight="Bold"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+        />
+
         <Button 
             x:Name="Kat"
             Content="Катакана" 
             Grid.Column="6"
-            Grid.Row="2"
+            Grid.Row="3"
             Style="{StaticResource ABC}"
-            Margin="10,2,10,2"
+            Margin="20,2,20,2"
             Click="Kat_Click"
             KeyDown="fon_KeyDown" Grid.ColumnSpan="2"
             >
@@ -245,11 +289,11 @@
             x:Name="Hir"
             Content="Хирагана" 
             Grid.Column="6"
-            Grid.Row="3"
+            Grid.Row="4"
             Style="{StaticResource ABC}"
-            Margin="10,2,10,2"
+            Margin="20,3,20,0"
             Click="Hir_Click"
-            KeyDown="fon_KeyDown" Grid.ColumnSpan="2"
+            KeyDown="fon_KeyDown" Grid.ColumnSpan="2" Grid.RowSpan="2"
             >
             <Button.Background>
                 <RadialGradientBrush>
@@ -263,11 +307,11 @@
             x:Name="All"
             Content="Перемешать" 
             Grid.Column="6"
-            Grid.Row="4"
+            Grid.Row="6"
             Style="{StaticResource ABC}"
-            Margin="10,2,10,2"
+            Margin="20,2,20,2"
             Click="All_Click"
-            KeyDown="fon_KeyDown" Grid.ColumnSpan="2"
+            KeyDown="fon_KeyDown" Grid.ColumnSpan="2" Grid.RowSpan="2"
             >
             <Button.Background>
                 <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0,1">
@@ -290,9 +334,9 @@
             x:Name="Reset"
             Content="Сброс"
             Grid.Column="6"
-            Grid.Row="5"
+            Grid.Row="8"
             Style="{StaticResource ABC}"
-            Margin="10,2,10,2"
+            Margin="20,2,20,8"
             Click="Reset_Click"
             KeyDown="fon_KeyDown" Grid.ColumnSpan="2"
             />
@@ -305,6 +349,10 @@
             Click="help_Click" 
             Style="{StaticResource ABC}"
             />
+
+
+
+
 
     </Grid>
 </Page>

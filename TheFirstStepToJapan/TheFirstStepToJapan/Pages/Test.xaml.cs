@@ -511,7 +511,7 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "1reレ";
                 allword[n++] = "1roロ";
             }
-          
+
             //------------
 
             if (temp[14] == '1')
@@ -578,11 +578,11 @@ namespace TheFirstStepToJapan.Pages
                 if (answer[i].Length == 0)
                 {
                     string tempstr = allword[rnd.Next(0, allword.Length)];
-                    while 
+                    while
                         (
-                        (tempstr.CompareTo(answer[1]) == 0)||
-                        (tempstr.CompareTo(answer[2]) == 0)||
-                        (tempstr.CompareTo(answer[3]) == 0)||
+                        (tempstr.CompareTo(answer[1]) == 0) ||
+                        (tempstr.CompareTo(answer[2]) == 0) ||
+                        (tempstr.CompareTo(answer[3]) == 0) ||
                         (tempstr.CompareTo(answer[4]) == 0)
                         )
                         tempstr = allword[rnd.Next(0, allword.Length)];
@@ -730,8 +730,8 @@ namespace TheFirstStepToJapan.Pages
                 ((Button)sender).Focus();
             }
             catch
-            { 
-            
+            {
+
             }
         }
 
@@ -780,6 +780,5 @@ namespace TheFirstStepToJapan.Pages
                 hiddenAll(false, im_temp);
             }
         }
-
     }
 }

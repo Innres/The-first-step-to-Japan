@@ -15,6 +15,8 @@ namespace TheFirstStepToJapan.Pages
         {
             InitializeComponent();
 
+            All.Content = "Катакана и\r\nХирагана";
+
             Abc_Buttons[0] = aiueo;
             Abc_Buttons[1] = k;
             Abc_Buttons[2] = g;
@@ -169,7 +171,8 @@ namespace TheFirstStepToJapan.Pages
 
         private void fon_MouseMove(object sender, MouseEventArgs e)
         {
-            ((Button)sender).Focus();
+            try { ((Button)sender).Focus(); }
+            catch { }
         }
 
         private void fon_KeyDown(object sender, KeyEventArgs e)
@@ -220,6 +223,7 @@ namespace TheFirstStepToJapan.Pages
                 All.FontSize = newSize;
                 Reset.FontSize = newSize;
                 help.FontSize = newSize;
+                Text_but.FontSize = newSize;
 
                 for (int i = 0; i < 15; i++)
                 {
