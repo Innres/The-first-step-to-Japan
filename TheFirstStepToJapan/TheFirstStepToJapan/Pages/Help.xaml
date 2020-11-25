@@ -30,6 +30,9 @@
     </Page.Resources>
 
     <Grid x:Name="grid" SizeChanged="grid_SizeChanged" MouseDown="grid_MouseDown">
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="2" Opacity="0.3"/>
+        </Grid.Effect>
         <Grid.RowDefinitions>
             <RowDefinition Height="41*"/>
             <RowDefinition Height="408*"/>
