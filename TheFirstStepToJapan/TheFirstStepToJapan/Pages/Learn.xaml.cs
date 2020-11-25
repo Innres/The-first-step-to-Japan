@@ -705,6 +705,9 @@ namespace TheFirstStepToJapan.Pages
                 effect.Radius = 10;
                 im.Margin = new Thickness(100, 100, 100, 100);
                 im.Opacity = 1;
+
+                fon_black.Height = grid.Height + 10;
+                fon_black.Width = grid.Width + 10;
             }
             else
             {
@@ -713,6 +716,9 @@ namespace TheFirstStepToJapan.Pages
                 effect.Radius = 0;
                 im.Margin = new Thickness(8000, 8000, 8000, 8000);
                 im.Opacity = 0;
+
+                fon_black.Height = 0;
+                fon_black.Width = 0;
             }
 
             try
@@ -722,44 +728,16 @@ namespace TheFirstStepToJapan.Pages
             catch { }
 
             b1.Effect = effect;
-            b1.IsEnabled = !flag;
-
             b2.Effect = effect;
-            b2.IsEnabled = !flag;
-
             b3.Effect = effect;
-            b3.IsEnabled = !flag;
-
             b4.Effect = effect;
-            b4.IsEnabled = !flag;
-
             text.Effect = effect;
-            text.IsEnabled = !flag;
-
             Back.Effect = effect;
-            Back.IsEnabled = !flag;
-
             kat.Effect = effect;
-            kat.IsEnabled = !flag;
-
             hir.Effect = effect;
-            hir.IsEnabled = !flag;
-
             proportion.Effect = effect;
-            proportion.IsEnabled = !flag;
-
             word_stat.Effect = effect;
-            word_stat.IsEnabled = !flag;
-
             add_Word.Effect = effect;
-            add_Word.IsEnabled = !flag;
-
-            if (size_n == size)
-            {
-                add_Word.IsEnabled = false;
-                try { fon.Focus(); }
-                catch { }
-            }
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)

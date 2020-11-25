@@ -31,7 +31,7 @@
         </Style>
     </Page.Resources>
 
-    <Grid MouseDown="Grid_MouseDown" SizeChanged="Grid_SizeChanged">
+    <Grid x:Name="grid" MouseDown="Grid_MouseDown" SizeChanged="Grid_SizeChanged">
 
         <Grid.Effect>
             <DropShadowEffect BlurRadius="2" Opacity="0.3"/>
@@ -172,6 +172,27 @@
             <TextBox x:Name="f4" Grid.Column="2" Margin="3000" Grid.Row="1" Background="#7FAAAAAA" Focusable="False" IsTabStop="False" AllowDrop="False" KeyDown="fon_KeyDown" MouseMove="fon_MouseMove" Cursor="Arrow"/>
         </Grid>
 
+        <Rectangle
+            x:Name="fon_black"
+            Grid.Column="0" 
+            Grid.Row="0" 
+            
+            Grid.ColumnSpan="10"
+            Grid.RowSpan="10" 
+            
+            Height="0" 
+            Width="0"
+            Stroke="Black" 
+            
+            KeyDown="fon_KeyDown"
+            MouseMove="fon_MouseMove"
+            
+            >
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.3"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        
         <Image
             x:Name="Abc"
             Opacity="0"

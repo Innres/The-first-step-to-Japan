@@ -36,9 +36,10 @@ namespace TheFirstStepToJapan.Pages
 
         private void fon_MouseMove(object sender, MouseEventArgs e)
         {
-            ((Button)sender).Focus();
+            try { ((Button)sender).Focus(); }
+            catch { }
         }
-
+        
         private void fon_KeyDown(object sender, KeyEventArgs e)
         {
             if (Keyboard.IsKeyDown(Key.Escape))
@@ -75,6 +76,8 @@ namespace TheFirstStepToJapan.Pages
                 effect.Radius = 10;
                 im.Margin = new Thickness(100, 100, 100, 100);
                 im.Opacity = 1;
+                fon_black.Height = grid.Height + 10;
+                fon_black.Width = grid.Width + 10;
             }
             else
             {
@@ -83,6 +86,9 @@ namespace TheFirstStepToJapan.Pages
                 effect.Radius = 0;
                 im.Margin = new Thickness(8000, 8000, 8000, 8000);
                 im.Opacity = 0;
+
+                fon_black.Height = 0;
+                fon_black.Width = 0;
             }
 
             try
@@ -92,16 +98,9 @@ namespace TheFirstStepToJapan.Pages
             catch { }
 
             text.Effect = effect;
-            text.IsEnabled = !flag;
-
             Back.Effect = effect;
-            Back.IsEnabled = !flag;
-
             kat.Effect = effect;
-            kat.IsEnabled = !flag;
-
             hir.Effect = effect;
-            hir.IsEnabled = !flag;
         }
 
 

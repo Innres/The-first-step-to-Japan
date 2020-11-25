@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Effects;
 using System.Windows.Navigation;
 
 namespace TheFirstStepToJapan.Pages
@@ -12,7 +13,6 @@ namespace TheFirstStepToJapan.Pages
         public MainMenu1()
         {     
             InitializeComponent();
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

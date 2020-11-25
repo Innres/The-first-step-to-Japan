@@ -100,6 +100,29 @@
             IsReadOnly="True" Grid.ColumnSpan="2"
             />
 
+
+        <Rectangle
+            x:Name="fon_black"
+            Grid.Column="0" 
+            Grid.Row="0" 
+            
+            Grid.ColumnSpan="10"
+            Grid.RowSpan="10" 
+            
+            Height="0" 
+            Width="0"
+            Stroke="Black" 
+            
+            KeyDown="fon_KeyDown"
+            MouseMove="fon_MouseMove"
+            
+            >
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.3"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
         <Image
             x:Name="Abc"
             Opacity="0"

@@ -28,7 +28,7 @@
             <Setter Property="TextBlock.TextAlignment" Value="Center"/>
         </Style>
     </Page.Resources>
-    
+
     <Grid SizeChanged="Grid_SizeChanged">
         <Grid.Effect>
             <DropShadowEffect BlurRadius="2" Opacity="0.3"/>
@@ -40,11 +40,11 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="109*"/>
-            <ColumnDefinition Width="243*"/>
-            <ColumnDefinition Width="110*"/>
-            <ColumnDefinition Width="234*"/>
             <ColumnDefinition Width="96*"/>
+            <ColumnDefinition Width="236*"/>
+            <ColumnDefinition Width="135*"/>
+            <ColumnDefinition Width="236*"/>
+            <ColumnDefinition Width="97*"/>
         </Grid.ColumnDefinitions>
 
         <Button 
@@ -74,10 +74,10 @@
             Content="Наборы слов"
             >
             <Button.Background>
-            <RadialGradientBrush>
-                <GradientStop Color="#FFF4F4F4" Offset="1"/>
-                <GradientStop Color="#FFDEDEDE"/>
-            </RadialGradientBrush>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFF4F4F4" Offset="1"/>
+                    <GradientStop Color="#FFDEDEDE"/>
+                </RadialGradientBrush>
             </Button.Background>
         </Button>
 

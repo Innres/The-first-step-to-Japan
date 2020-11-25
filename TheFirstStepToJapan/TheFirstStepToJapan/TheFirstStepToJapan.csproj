@@ -131,15 +131,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Katakana.jpg" />
+    <Folder Include="Image\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pages\Katakana.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Image\Katakana.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pages\Hiragana.jpg" />

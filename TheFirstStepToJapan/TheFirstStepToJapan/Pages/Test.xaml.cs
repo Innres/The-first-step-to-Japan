@@ -632,6 +632,12 @@ namespace TheFirstStepToJapan.Pages
                 update_Buttons();
             else
             {
+                int number = int.Parse(((Button)sender).Tag + "");
+
+                //при неверном выборе в кнопке будет такой формат "あ - a"
+                ((Button)sender).Content = answer[number].Substring(answer[number].Length - 1) + " - "
+                    + answer[number].Substring(1, answer[number].Length - 2);
+
                 ((Button)sender).IsEnabled = false;
                 attempt = 0;
 
@@ -659,6 +665,9 @@ namespace TheFirstStepToJapan.Pages
                 effect.Radius = 10;
                 im.Margin = new Thickness(100, 100, 100, 100);
                 im.Opacity = 1;
+
+                fon_black.Height = grid.Height + 10;
+                fon_black.Width = grid.Width + 10;
             }
             else
             {
@@ -667,6 +676,9 @@ namespace TheFirstStepToJapan.Pages
                 effect.Radius = 0;
                 im.Margin = new Thickness(8000, 8000, 8000, 8000);
                 im.Opacity = 0;
+
+                fon_black.Height = 0;
+                fon_black.Width = 0;
             }
 
             try
@@ -676,31 +688,14 @@ namespace TheFirstStepToJapan.Pages
             catch { }
 
             b1.Effect = effect;
-            b1.IsEnabled = !flag;
-
             b2.Effect = effect;
-            b2.IsEnabled = !flag;
-
             b3.Effect = effect;
-            b3.IsEnabled = !flag;
-
             b4.Effect = effect;
-            b4.IsEnabled = !flag;
-
             text.Effect = effect;
-            text.IsEnabled = !flag;
-
             Back.Effect = effect;
-            Back.IsEnabled = !flag;
-
             kat.Effect = effect;
-            kat.IsEnabled = !flag;
-
             hir.Effect = effect;
-            hir.IsEnabled = !flag;
-
             proportion.Effect = effect;
-            proportion.IsEnabled = !flag;
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)

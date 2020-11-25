@@ -61,6 +61,15 @@
             <RowDefinition Height="80*"/>
         </Grid.RowDefinitions>
 
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,1" MappingMode="RelativeToBoundingBox" StartPoint="0,0">
+                <GradientStop Color="#FF0D5DAC" Offset="1"/>
+                <GradientStop Color="#FF44A2CD" Offset="0.342"/>
+                <GradientStop Color="#FF0D5DAC"/>
+                <GradientStop Color="#FF247ABA" Offset="0.738"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
         <Button 
             IsEnabled="true" 
             Opacity="0" 
@@ -279,8 +288,8 @@
             >
             <Button.Background>
                 <RadialGradientBrush>
-                    <GradientStop Color="#FF58F57C"/>
-                    <GradientStop Color="#FF2CCB50" Offset="1"/>
+                    <GradientStop Color="#FF61DA7D"/>
+                    <GradientStop Color="#FF39B856" Offset="1"/>
                 </RadialGradientBrush>
             </Button.Background>
         </Button>
@@ -297,8 +306,8 @@
             >
             <Button.Background>
                 <RadialGradientBrush>
-                    <GradientStop Color="#FF99FFF6"/>
-                    <GradientStop Color="#FF60E6D9" Offset="1"/>
+                    <GradientStop Color="#FF74EADF"/>
+                    <GradientStop Color="#FF76D6CD" Offset="1"/>
                 </RadialGradientBrush>
             </Button.Background>
         </Button>
@@ -323,8 +332,8 @@
                             <TranslateTransform/>
                         </TransformGroup>
                     </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FF2CCB50" Offset="0.29"/>
-                    <GradientStop Color="#FF60E6D9" Offset="0.578"/>
+                    <GradientStop Color="#FF39B856" Offset="0.29"/>
+                    <GradientStop Color="#FF76D6CD" Offset="0.578"/>
                 </LinearGradientBrush>
             </Button.Background>
 
