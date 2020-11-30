@@ -32,7 +32,7 @@
 
 
 
-    <Grid x:Name="grid" SizeChanged="grid_SizeChanged">
+    <Grid x:Name="grid" SizeChanged="grid_SizeChanged" MouseDown="grid_MouseDown">
         <Grid.Effect>
             <DropShadowEffect BlurRadius="2" Opacity="0.3"/>
         </Grid.Effect>
@@ -64,6 +64,7 @@
         
         
         <Button 
+            x:Name="fon"
             IsEnabled="true" 
             Opacity="0" 
             Grid.ColumnSpan="8" 
@@ -352,9 +353,67 @@
             Style="{StaticResource ABC}"
             />
 
+        <Rectangle
+            x:Name="fon_black"
+            Grid.Column="0" 
+            Grid.Row="0" 
+            
+            Grid.ColumnSpan="20"
+            Grid.RowSpan="20" 
+            
+            Height="0" 
+            Width="0"
+            Stroke="Black" 
+            
+            KeyDown="fon_KeyDown"
+            MouseMove="fon_MouseMove"
+            
+            >
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0.3"/>
+            </Rectangle.Fill>
+        </Rectangle>
 
+        <TextBox 
+            x:Name="text"
+            Text="Горячие клавиши"
+            TextWrapping="Wrap" 
+            Grid.Column="0"
+            Grid.Row="0"
+            Margin="8000"
+            FontFamily="Calibri" 
+            FontSize="20" 
+            FontWeight="Bold" 
+            HorizontalContentAlignment="Center" 
+            VerticalContentAlignment="Center"
+            Foreground="#FF1B2452"
+            IsReadOnly="True" 
+            Grid.ColumnSpan="20"
+            Grid.RowSpan="20"
+            />
 
-
+        <Rectangle
+            x:Name="fon_black_copy"
+            Grid.Column="0" 
+            Grid.Row="0" 
+            
+            Grid.ColumnSpan="20"
+            Grid.RowSpan="20" 
+            
+            Height="0" 
+            Width="0"
+            Stroke="Black" 
+            
+            KeyDown="fon_KeyDown"
+            MouseMove="fon_MouseMove"
+            
+            >
+            <Rectangle.Fill>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Rectangle.Fill>
+        </Rectangle>
 
     </Grid>
+    
+    
 </Page>

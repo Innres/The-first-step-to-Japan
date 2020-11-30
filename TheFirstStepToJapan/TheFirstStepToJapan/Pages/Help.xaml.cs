@@ -18,6 +18,7 @@ namespace TheFirstStepToJapan.Pages
         public Help()
         {
             InitializeComponent();
+
             text.Text =
                 "Чтобы быстро выбрать символы вы можете:\r\n" +
                 "Зажать одну из клавиш и провести мышкой по символам.\r\n" +

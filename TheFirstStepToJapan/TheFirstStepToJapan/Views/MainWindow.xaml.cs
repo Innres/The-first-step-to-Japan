@@ -8,7 +8,7 @@ namespace TheFirstStepToJapan
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+       public MainWindow()
         {
             InitializeComponent();
             frm.Content = new Pages.MainMenu1();
@@ -16,5 +16,6 @@ namespace TheFirstStepToJapan
             MaxHeight = 7900;
             MaxWidth = 7900;
         }
+
     }
 }

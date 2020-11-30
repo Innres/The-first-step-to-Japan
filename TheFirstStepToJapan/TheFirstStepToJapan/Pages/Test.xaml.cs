@@ -20,6 +20,7 @@ namespace TheFirstStepToJapan.Pages
         int size;
         int n = 0;
         int attempt = 0;
+        int[] my_random; 
         bool flag_pic;
 
         Image im_temp;
@@ -29,9 +30,11 @@ namespace TheFirstStepToJapan.Pages
             answer = new string[5];
             flag_pic = false;
             size = 0;
+
             InitializeComponent();
-            string temp = File.ReadLines("fisrtStepTemp.txt").First();
-            File.Delete("fisrtStepTemp.txt");
+            
+            string temp = KarHirMenu.temp_info;
+
             for (int i = 0; i < temp.Length; i++)
                 if (temp[i] == '1' || temp[i] == '2')
                     size += ((i != 12) && (i != 14)) ? 5 : 3;
@@ -43,11 +46,15 @@ namespace TheFirstStepToJapan.Pages
             effect = new BlurEffect();
             effect.Radius = 0;
 
+            my_random = new int[size];
+            for (int i = 0; i < size; i++)
+                my_random[i] = 3;
+
             update_proportion();
 
             //------------
 
-            if (temp[0] == '1')
+            if ((temp[0] == '1') || (temp[0] == '3'))
             {
                 allword[n++] = "0aあ";
                 allword[n++] = "0iい";
@@ -55,24 +62,8 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "0eえ";
                 allword[n++] = "0oお";
             }
-            else
-            if (temp[0] == '2')
+            if ((temp[0] == '2') || (temp[0] == '3'))
             {
-                allword[n++] = "1aア";
-                allword[n++] = "1iイ";
-                allword[n++] = "1uウ";
-                allword[n++] = "1e工";
-                allword[n++] = "1oオ";
-            }
-            else
-            if (temp[0] == '3')
-            {
-                allword[n++] = "0aあ";
-                allword[n++] = "0iい";
-                allword[n++] = "0uう";
-                allword[n++] = "0eえ";
-                allword[n++] = "0oお";
-
                 allword[n++] = "1aア";
                 allword[n++] = "1iイ";
                 allword[n++] = "1uウ";
@@ -81,7 +72,8 @@ namespace TheFirstStepToJapan.Pages
             }
 
             //------------
-            if (temp[1] == '1')
+
+            if ((temp[1] == '1') || (temp[1] == '3'))
             {
                 allword[n++] = "0kaか";
                 allword[n++] = "0kiき";
@@ -89,8 +81,7 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "0keけ";
                 allword[n++] = "0koこ";
             }
-            else
-            if (temp[1] == '2')
+            if ((temp[1] == '2') || (temp[1] == '3'))
             {
                 allword[n++] = "1kaカ";
                 allword[n++] = "1kiキ";
@@ -98,23 +89,10 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "1keケ";
                 allword[n++] = "1koコ";
             }
-            else
-            if (temp[1] == '3')
-            {
-                allword[n++] = "0kaか";
-                allword[n++] = "0kiき";
-                allword[n++] = "0kuく";
-                allword[n++] = "0keけ";
-                allword[n++] = "0koこ";
 
-                allword[n++] = "1kaカ";
-                allword[n++] = "1kiキ";
-                allword[n++] = "1kuク";
-                allword[n++] = "1keケ";
-                allword[n++] = "1koコ";
-            }
             //------------
-            if (temp[2] == '1')
+
+            if ((temp[2] == '1') || (temp[2] == '3'))
             {
                 allword[n++] = "0gaが";
                 allword[n++] = "0giぎ";
@@ -122,8 +100,7 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "0geげ";
                 allword[n++] = "0goご";
             }
-            else
-            if (temp[2] == '2')
+            if ((temp[2] == '2') || (temp[2] == '3'))
             {
                 allword[n++] = "1gaガ";
                 allword[n++] = "1giギ";
@@ -131,23 +108,10 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "1geゲ";
                 allword[n++] = "1goゴ";
             }
-            else
-            if (temp[2] == '3')
-            {
-                allword[n++] = "0gaが";
-                allword[n++] = "0giぎ";
-                allword[n++] = "0guぐ";
-                allword[n++] = "0geげ";
-                allword[n++] = "0goご";
 
-                allword[n++] = "1gaガ";
-                allword[n++] = "1giギ";
-                allword[n++] = "1guグ";
-                allword[n++] = "1geゲ";
-                allword[n++] = "1goゴ";
-            }
             //------------
-            if (temp[3] == '1')
+
+            if ((temp[3] == '1') || (temp[3] == '3'))
             {
                 allword[n++] = "0saさ";
                 allword[n++] = "0shiし";
@@ -155,8 +119,7 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "0seせ";
                 allword[n++] = "0soそ";
             }
-            else
-            if (temp[3] == '2')
+            if ((temp[3] == '2') || (temp[3] == '3'))
             {
                 allword[n++] = "1saサ";
                 allword[n++] = "1shiシ";
@@ -164,23 +127,10 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "1seセ";
                 allword[n++] = "1soン";
             }
-            else
-            if (temp[3] == '3')
-            {
-                allword[n++] = "0saさ";
-                allword[n++] = "0shiし";
-                allword[n++] = "0suす";
-                allword[n++] = "0seせ";
-                allword[n++] = "0soそ";
 
-                allword[n++] = "1saサ";
-                allword[n++] = "1shiシ";
-                allword[n++] = "1suス";
-                allword[n++] = "1seセ";
-                allword[n++] = "1soン";
-            }
             //------------
-            if (temp[4] == '1')
+
+            if ((temp[4] == '1') || (temp[4] == '3'))
             {
                 allword[n++] = "0zaざ";
                 allword[n++] = "0jiじ";
@@ -188,8 +138,7 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "0zeぜ";
                 allword[n++] = "0zoぞ";
             }
-            else
-            if (temp[4] == '2')
+            if ((temp[4] == '2') || (temp[4] == '3'))
             {
                 allword[n++] = "1zaザ";
                 allword[n++] = "1jiジ";
@@ -197,23 +146,10 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "1zeゼ";
                 allword[n++] = "1zoゾ";
             }
-            else
-            if (temp[4] == '3')
-            {
-                allword[n++] = "0zaざ";
-                allword[n++] = "0jiじ";
-                allword[n++] = "0zu(z)ず";
-                allword[n++] = "0zeぜ";
-                allword[n++] = "0zoぞ";
 
-                allword[n++] = "1zaザ";
-                allword[n++] = "1jiジ";
-                allword[n++] = "1zu(z)ズ";
-                allword[n++] = "1zeゼ";
-                allword[n++] = "1zoゾ";
-            }
             //------------
-            if (temp[5] == '1')
+
+            if ((temp[5] == '1') || (temp[5] == '3'))
             {
                 allword[n++] = "0taた";
                 allword[n++] = "0chiち";
@@ -221,8 +157,7 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "0teて";
                 allword[n++] = "0toと";
             }
-            else
-            if (temp[5] == '2')
+            if ((temp[5] == '2') || (temp[5] == '3'))
             {
                 allword[n++] = "1taタ";
                 allword[n++] = "1chiチ";
@@ -230,23 +165,10 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "1teテ";
                 allword[n++] = "1toト";
             }
-            else
-            if (temp[5] == '3')
-            {
-                allword[n++] = "0taた";
-                allword[n++] = "0chiち";
-                allword[n++] = "0tsuつ";
-                allword[n++] = "0teて";
-                allword[n++] = "0toと";
 
-                allword[n++] = "1taタ";
-                allword[n++] = "1chiチ";
-                allword[n++] = "1tsuツ";
-                allword[n++] = "1teテ";
-                allword[n++] = "1toト";
-            }
             //------------
-            if (temp[6] == '1')
+
+            if ((temp[6] == '1') || (temp[6] == '3'))
             {
                 allword[n++] = "0daだ";
                 allword[n++] = "0jiぢ";
@@ -254,8 +176,7 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "0deで";
                 allword[n++] = "0doど";
             }
-            else
-            if (temp[6] == '2')
+            if ((temp[6] == '2') || (temp[6] == '3'))
             {
                 allword[n++] = "1daダ";
                 allword[n++] = "1diヂ";
@@ -263,23 +184,10 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "1deデ";
                 allword[n++] = "1doド";
             }
-            else
-            if (temp[6] == '3')
-            {
-                allword[n++] = "0daだ";
-                allword[n++] = "0jiぢ";
-                allword[n++] = "0zu(d)づ";
-                allword[n++] = "0deで";
-                allword[n++] = "0doど";
 
-                allword[n++] = "1daダ";
-                allword[n++] = "1diヂ";
-                allword[n++] = "1duジ";
-                allword[n++] = "1deデ";
-                allword[n++] = "1doド";
-            }
             //------------
-            if (temp[7] == '1')
+
+            if ((temp[7] == '1') || (temp[7] == '3'))
             {
                 allword[n++] = "0naな";
                 allword[n++] = "0niに";
@@ -287,8 +195,7 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "0neね";
                 allword[n++] = "0noの";
             }
-            else
-            if (temp[7] == '2')
+            if ((temp[7] == '2') || (temp[7] == '3'))
             {
                 allword[n++] = "1naナ";
                 allword[n++] = "1niニ";
@@ -296,24 +203,10 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "1neネ";
                 allword[n++] = "1noノ";
             }
-            else
-            if (temp[7] == '3')
-            {
-                allword[n++] = "0naな";
-                allword[n++] = "0niに";
-                allword[n++] = "0nuぬ";
-                allword[n++] = "0neね";
-                allword[n++] = "0noの";
 
-                allword[n++] = "1naナ";
-                allword[n++] = "1niニ";
-                allword[n++] = "1nuヌ";
-                allword[n++] = "1neネ";
-                allword[n++] = "1noノ";
-            }
             //------------
 
-            if (temp[8] == '1')
+            if ((temp[8] == '1') || (temp[8] == '3'))
             {
                 allword[n++] = "0haは";
                 allword[n++] = "0hiひ";
@@ -321,34 +214,18 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "0heへ";
                 allword[n++] = "0hoほ";
             }
-            else
-            if (temp[8] == '2')
+            if ((temp[8] == '2') || (temp[8] == '3'))
             {
                 allword[n++] = "1haハ";
                 allword[n++] = "1hiヒ";
                 allword[n++] = "1fuフ";
-                allword[n++] = "1heヘ";
-                allword[n++] = "1hoホ";
-            }
-            else
-            if (temp[8] == '3')
-            {
-                allword[n++] = "0haは";
-                allword[n++] = "0hiひ";
-                allword[n++] = "0fuふ";
-                allword[n++] = "0heへ";
-                allword[n++] = "0hoほ";
-
-                allword[n++] = "1haハ";
-                allword[n++] = "1hiヒ";
-                allword[n++] = "1fuフ";
-                allword[n++] = "1heヘ";
+                allword[n++] = "1heへ";
                 allword[n++] = "1hoホ";
             }
 
             //------------
 
-            if (temp[9] == '1')
+            if ((temp[9] == '1') || (temp[9] == '3'))
             {
                 allword[n++] = "0baば";
                 allword[n++] = "0biび";
@@ -356,34 +233,18 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "0beべ";
                 allword[n++] = "0boぼ";
             }
-            else
-            if (temp[9] == '2')
+            if ((temp[9] == '2') || (temp[9] == '3'))
             {
                 allword[n++] = "1baバ";
                 allword[n++] = "1biビ";
                 allword[n++] = "1buブ";
-                allword[n++] = "1beベ";
-                allword[n++] = "1boボ";
-            }
-            else
-            if (temp[9] == '3')
-            {
-                allword[n++] = "0baば";
-                allword[n++] = "0biび";
-                allword[n++] = "0buぶ";
-                allword[n++] = "0beべ";
-                allword[n++] = "0boぼ";
-
-                allword[n++] = "1baバ";
-                allword[n++] = "1biビ";
-                allword[n++] = "1buブ";
-                allword[n++] = "1beベ";
+                allword[n++] = "1beべ";
                 allword[n++] = "1boボ";
             }
 
             //------------
 
-            if (temp[10] == '1')
+            if ((temp[10] == '1') || (temp[10] == '3'))
             {
                 allword[n++] = "0paぱ";
                 allword[n++] = "0piぴ";
@@ -391,33 +252,17 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "0peぺ";
                 allword[n++] = "0poぽ";
             }
-            else
-            if (temp[10] == '2')
+            if ((temp[10] == '2') || (temp[10] == '3'))
             {
                 allword[n++] = "1paパ";
                 allword[n++] = "1piピ";
                 allword[n++] = "1puプ";
-                allword[n++] = "1peペ";
-                allword[n++] = "1poポ";
-            }
-            else
-            if (temp[10] == '3')
-            {
-                allword[n++] = "0paぱ";
-                allword[n++] = "0piぴ";
-                allword[n++] = "0puぷ";
-                allword[n++] = "0peぺ";
-                allword[n++] = "0poぽ";
-
-                allword[n++] = "1paパ";
-                allword[n++] = "1piピ";
-                allword[n++] = "1puプ";
-                allword[n++] = "1peペ";
+                allword[n++] = "1peぺ";
                 allword[n++] = "1poポ";
             }
 
             //------------
-            if (temp[11] == '1')
+            if ((temp[11] == '1') || (temp[11] == '3'))
             {
                 allword[n++] = "0maま";
                 allword[n++] = "0miみ";
@@ -425,24 +270,8 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "0meめ";
                 allword[n++] = "0moも";
             }
-            else
-            if (temp[11] == '2')
+            if ((temp[11] == '2') || (temp[11] == '3'))
             {
-                allword[n++] = "1maマ";
-                allword[n++] = "1miミ";
-                allword[n++] = "1muム";
-                allword[n++] = "1meメ";
-                allword[n++] = "1moモ";
-            }
-            else
-            if (temp[11] == '3')
-            {
-                allword[n++] = "0maま";
-                allword[n++] = "0miみ";
-                allword[n++] = "0muむ";
-                allword[n++] = "0meめ";
-                allword[n++] = "0moも";
-
                 allword[n++] = "1maマ";
                 allword[n++] = "1miミ";
                 allword[n++] = "1muム";
@@ -452,26 +281,14 @@ namespace TheFirstStepToJapan.Pages
 
             //------------
 
-            if (temp[12] == '1')
+            if ((temp[12] == '1') || (temp[12] == '3'))
             {
                 allword[n++] = "0yaや";
                 allword[n++] = "0yuゆ";
                 allword[n++] = "0yoよ";
             }
-            else
-            if (temp[12] == '2')
+            if ((temp[12] == '2') || (temp[12] == '3'))
             {
-                allword[n++] = "1yaヤ";
-                allword[n++] = "1yuユ";
-                allword[n++] = "1yoヨ";
-            }
-            else
-            if (temp[12] == '3')
-            {
-                allword[n++] = "0yaや";
-                allword[n++] = "0yuゆ";
-                allword[n++] = "0yoよ";
-
                 allword[n++] = "1yaヤ";
                 allword[n++] = "1yuユ";
                 allword[n++] = "1yoヨ";
@@ -479,7 +296,7 @@ namespace TheFirstStepToJapan.Pages
 
             //------------
 
-            if (temp[13] == '1')
+            if ((temp[13] == '1') || (temp[13] == '3'))
             {
                 allword[n++] = "0raら";
                 allword[n++] = "0riり";
@@ -487,24 +304,8 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "0reれ";
                 allword[n++] = "0roろ";
             }
-            else
-            if (temp[13] == '2')
+            if ((temp[13] == '2') || (temp[13] == '3'))
             {
-                allword[n++] = "1raラ";
-                allword[n++] = "1riリ";
-                allword[n++] = "1ruル";
-                allword[n++] = "1reレ";
-                allword[n++] = "1roロ";
-            }
-            else
-            if (temp[13] == '3')
-            {
-                allword[n++] = "0raら";
-                allword[n++] = "0riり";
-                allword[n++] = "0ruる";
-                allword[n++] = "0reれ";
-                allword[n++] = "0roろ";
-
                 allword[n++] = "1raラ";
                 allword[n++] = "1riリ";
                 allword[n++] = "1ruル";
@@ -514,30 +315,19 @@ namespace TheFirstStepToJapan.Pages
 
             //------------
 
-            if (temp[14] == '1')
+            if ((temp[14] == '1') || (temp[14] == '3'))
             {
                 allword[n++] = "0waわ";
                 allword[n++] = "0nん";
                 allword[n++] = "0woを";
             }
-            else
-            if (temp[14] == '2')
+            if ((temp[14] == '2') || (temp[14] == '3'))
             {
                 allword[n++] = "1waワ";
                 allword[n++] = "1nン";
                 allword[n++] = "1woヲ";
             }
-            else
-            if (temp[14] == '3')
-            {
-                allword[n++] = "0waわ";
-                allword[n++] = "0nん";
-                allword[n++] = "0woを";
 
-                allword[n++] = "1waワ";
-                allword[n++] = "1nン";
-                allword[n++] = "1woヲ";
-            }
             //------------
 
 
@@ -546,7 +336,16 @@ namespace TheFirstStepToJapan.Pages
 
         public bool check_answer(string tag)
         {
-            return (answer[0].CompareTo(answer[Int32.Parse(tag)]) == 0);
+            return (answer[0].Substring(1).CompareTo(answer[Int32.Parse(tag)].Substring(1)) == 0);
+        }
+
+        public bool check_rand(int n)
+        {
+            if (my_random.Sum()<=0)
+                for (int i = 0; i < size; i++)
+                    my_random[i] = 3;
+
+            return my_random[n]==0;
         }
 
         public void update_Buttons()
@@ -570,7 +369,12 @@ namespace TheFirstStepToJapan.Pages
             for (int i = 1; i < 5; i++)
                 answer[i] = "";
 
-            answer[0] = allword[rnd.Next(0, allword.Length)];
+            int num_str = rnd.Next(0, allword.Length);
+            while(check_rand(num_str))
+                num_str = rnd.Next(0, allword.Length);
+            answer[0] = allword[num_str];
+            my_random[num_str]--;
+
 
             answer[rnd.Next(1, 5)] = answer[0];
 
@@ -583,7 +387,7 @@ namespace TheFirstStepToJapan.Pages
                         (tempstr.CompareTo(answer[1]) == 0) ||
                         (tempstr.CompareTo(answer[2]) == 0) ||
                         (tempstr.CompareTo(answer[3]) == 0) ||
-                        (tempstr.CompareTo(answer[4]) == 0)
+                        (tempstr.CompareTo(answer[4]) == 0) 
                         )
                         tempstr = allword[rnd.Next(0, allword.Length)];
 

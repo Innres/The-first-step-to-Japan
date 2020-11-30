@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media.Effects;
 using System.Windows.Navigation;
 
 namespace TheFirstStepToJapan.Pages
@@ -10,12 +11,33 @@ namespace TheFirstStepToJapan.Pages
     /// </summary>
     public partial class KarHirMenu : Page
     {
+        BlurEffect effect;
+
         public Button[] Abc_Buttons = new Button[15];
+
+        public static bool first_start = true;
+
+        public static string temp_info { get; set; }
+
         public KarHirMenu()
         {
             InitializeComponent();
 
+            text.Text =
+                "Чтобы быстро выбрать символы вы можете:\r\n" +
+                "Зажать одну из клавиш и провести мышкой по символам.\r\n" +
+                "Клавиши:\r\n" +
+                "1 - \"Катакана\"\r\n" +
+                "2 - \"Хирагана\"\r\n" +
+                "3 - \"Перемешать\"\r\n" +
+                "4 - \"Сброс\".";
+
+            temp_info = "";
+
             All.Content = "Катакана и\r\nХирагана";
+
+            effect = new BlurEffect();
+            effect.Radius = 0;
 
             Abc_Buttons[0] = aiueo;
             Abc_Buttons[1] = k;
@@ -40,6 +62,9 @@ namespace TheFirstStepToJapan.Pages
                 Abc_Buttons[i].KeyDown += abc_KeyDown;
                 Abc_Buttons[i].MouseMove += abc_MouseMove;
             }
+
+            if (first_start)
+                show_help(true);
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
@@ -49,13 +74,13 @@ namespace TheFirstStepToJapan.Pages
 
         private void test_Click(object sender, RoutedEventArgs e)
         {
-            System.IO.File.WriteAllText("fisrtStepTemp.txt", info_But());
+            temp_info = info_But();
             NavigationService.Navigate(new Test());
         }
 
         private void learn_Click(object sender, RoutedEventArgs e)
         {
-            System.IO.File.WriteAllText("fisrtStepTemp.txt", info_But());
+            temp_info = info_But();
             NavigationService.Navigate(new Learn());
         }
 
@@ -179,7 +204,10 @@ namespace TheFirstStepToJapan.Pages
         {
             if (Keyboard.IsKeyDown(Key.Escape))
             {
-                back_Click(null, null);
+                if (fon_black.Height == 0)
+                    back_Click(null, null);
+                else
+                    show_help(false);
             }           
         }
 
@@ -206,6 +234,59 @@ namespace TheFirstStepToJapan.Pages
             for (int i = 0; i < 15; i++)
                 select_Reset(Abc_Buttons[i]);
         }
+        private void grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (fon_black.Height != 0)
+                show_help(false);
+        }
+
+        public void show_help(bool f)
+        {
+            if (f)
+            {
+                text.Margin = new Thickness(100, 100, 100, 100);
+                fon_black.Height = grid.Height + 10;
+                fon_black.Width = grid.Width + 10;
+                fon_black_copy.Height = grid.Height + 10;
+                fon_black_copy.Width = grid.Width + 10;
+                effect.Radius = 10;
+
+                first_start = false;
+            }
+            else
+            {
+                text.Margin = new Thickness(8000, 8000, 8000, 8000);
+                fon_black.Height = 0;
+                fon_black.Width = 0;
+                fon_black_copy.Height = 0;
+                fon_black_copy.Width = 0;
+
+                effect.Radius = 0;
+            }
+
+            try
+            {
+                fon.Focus();
+            }
+            catch { }
+
+            Back.Effect = effect;
+
+            test.Effect = effect;
+            learn.Effect = effect;
+
+            Kat.Effect = effect;
+            Hir.Effect = effect;
+            All.Effect = effect;
+            Reset.Effect = effect;
+            help.Effect = effect;
+            Text_but.Effect = effect;
+
+            for (int i = 0; i < 15; i++)
+            {
+                Abc_Buttons[i].Effect = effect;
+            }
+        }
 
         private void grid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
@@ -223,6 +304,7 @@ namespace TheFirstStepToJapan.Pages
                 All.FontSize = newSize;
                 Reset.FontSize = newSize;
                 help.FontSize = newSize;
+                text.FontSize = newSize;
                 Text_but.FontSize = newSize;
 
                 for (int i = 0; i < 15; i++)
