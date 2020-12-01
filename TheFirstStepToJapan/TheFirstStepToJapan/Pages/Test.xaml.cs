@@ -378,21 +378,29 @@ namespace TheFirstStepToJapan.Pages
 
             answer[rnd.Next(1, 5)] = answer[0];
 
-            for (int i = 1; i < 5; i++)
-                if (answer[i].Length == 0)
-                {
-                    string tempstr = allword[rnd.Next(0, allword.Length)];
-                    while
-                        (
-                        (tempstr.CompareTo(answer[1]) == 0) ||
-                        (tempstr.CompareTo(answer[2]) == 0) ||
-                        (tempstr.CompareTo(answer[3]) == 0) ||
-                        (tempstr.CompareTo(answer[4]) == 0) 
-                        )
-                        tempstr = allword[rnd.Next(0, allword.Length)];
+            //убрать повторение в кнопках
+            if (allword.Length > 3)
+            {
+                for (int i = 1; i < 5; i++)
+                    if (answer[i].Length == 0)
+                    {
+                        string tempstr = allword[rnd.Next(0, allword.Length)];
+                        while
+                            (
+                            (tempstr.CompareTo(answer[1]) == 0) ||
+                            (tempstr.CompareTo(answer[2]) == 0) ||
+                            (tempstr.CompareTo(answer[3]) == 0) ||
+                            (tempstr.CompareTo(answer[4]) == 0)
+                            )
+                            tempstr = allword[rnd.Next(0, allword.Length)];
 
-                    answer[i] = tempstr;
-                }
+                        answer[i] = tempstr;
+                    }
+            }
+            else
+                for (int i = 1; i < 5; i++)
+                    if (answer[i].Length == 0)
+                        answer[i] = allword[rnd.Next(0, allword.Length)];
 
             if (rnd.Next(0, 2) == 0)
             {
