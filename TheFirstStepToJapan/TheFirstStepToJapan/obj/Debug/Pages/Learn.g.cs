@@ -212,7 +212,7 @@ namespace TheFirstStepToJapan.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TheFirstStepToJapan;component/pages/learn.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Первый шаг к Японии;component/pages/learn.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Pages\Learn.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

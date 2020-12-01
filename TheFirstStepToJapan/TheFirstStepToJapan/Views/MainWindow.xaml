@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TheFirstStepToJapan"
         mc:Ignorable="d"
         x:Name="AppWindow"
-        Title="Первый шаг к Японии" Height="600" Width="800" Background="#FF157EE8">
+        Title="Первый шаг к Японии" Height="600" Width="800" Background="#FF157EE8" Icon="ico.ico">
 
     <Grid>
 

@@ -68,7 +68,7 @@ namespace TheFirstStepToJapan.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TheFirstStepToJapan;component/pages/mainmenu1.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Первый шаг к Японии;component/pages/mainmenu1.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Pages\MainMenu1.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

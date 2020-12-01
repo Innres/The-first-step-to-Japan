@@ -1,18 +1,10 @@
-C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\bin\Debug\TheFirstStepToJapan.exe.config
-C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\bin\Debug\TheFirstStepToJapan.exe
-C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\bin\Debug\TheFirstStepToJapan.pdb
 C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\TheFirstStepToJapan.csprojAssemblyReference.cache
 C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\Views\MainWindow.g.cs
 C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\App.g.cs
-C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\TheFirstStepToJapan_MarkupCompile.cache
-C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\TheFirstStepToJapan_MarkupCompile.lref
 C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\Views\MainWindow.baml
-C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\TheFirstStepToJapan.g.resources
 C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\TheFirstStepToJapan.Properties.Resources.resources
 C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\TheFirstStepToJapan.csproj.GenerateResource.cache
 C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\TheFirstStepToJapan.csproj.CoreCompileInputs.cache
-C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\TheFirstStepToJapan.exe
-C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\TheFirstStepToJapan.pdb
 C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\Pages\MainMenu1.g.cs
 C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\Pages\MainMenu1.baml
 C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\Pages\KarHirMenu.g.cs
@@ -23,3 +15,11 @@ C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\Pa
 C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\Pages\Learn.baml
 C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\Pages\Help.g.cs
 C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\Pages\Help.baml
+C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\bin\Debug\Первый шаг к Японии.exe.config
+C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\bin\Debug\Первый шаг к Японии.exe
+C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\bin\Debug\Первый шаг к Японии.pdb
+C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\Первый шаг к Японии_MarkupCompile.cache
+C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\Первый шаг к Японии_MarkupCompile.lref
+C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\Первый шаг к Японии.g.resources
+C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\Первый шаг к Японии.exe
+C:\Users\Admin\source\repos\TheFirstStepToJapan\TheFirstStepToJapan\obj\Debug\Первый шаг к Японии.pdb

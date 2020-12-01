@@ -196,7 +196,7 @@ namespace TheFirstStepToJapan.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TheFirstStepToJapan;component/pages/test.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Первый шаг к Японии;component/pages/test.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Pages\Test.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
