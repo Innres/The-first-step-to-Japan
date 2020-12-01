@@ -294,7 +294,10 @@ namespace TheFirstStepToJapan.Pages
         {
             try
             {
-                double newSize = 10 + e.NewSize.Width / 80;
+                //double newSize = 10 + e.NewSize.Width / 80;
+                double newSize = e.NewSize.Width / 40;
+                if (newSize > 20)
+                    newSize = 10 + e.NewSize.Width / 90;
 
                 Back.FontSize = newSize;
 

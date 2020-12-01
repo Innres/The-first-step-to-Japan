@@ -31,7 +31,7 @@ namespace TheFirstStepToJapan.Pages
             InitializeComponent();
 
             answer = new string[5];
-            add_Word.Content = "Новое\r\nслово";
+            add_Word.Content = "Следующий\r\nзвук";
 
             string temp = KarHirMenu.temp_info;
 
@@ -594,7 +594,10 @@ namespace TheFirstStepToJapan.Pages
         {
             try
             {
-                double newSize = 10 + e.NewSize.Width / 80;
+                //double newSize = 10 + e.NewSize.Width / 80;
+                double newSize = e.NewSize.Width / 40;
+                if(newSize>20)
+                    newSize = 10 + e.NewSize.Width / 90;
 
                 Back.FontSize = newSize;
                 text.FontSize = newSize + 10;
