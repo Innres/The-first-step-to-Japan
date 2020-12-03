@@ -126,7 +126,7 @@ namespace TheFirstStepToJapan.Pages
                 allword[n++] = "1shiシ";
                 allword[n++] = "1suス";
                 allword[n++] = "1seセ";
-                allword[n++] = "1soン";
+                allword[n++] = "1soソ";
             }
 
             //------------
